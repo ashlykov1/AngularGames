@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { MyComponent } from './my-component/my-component.component';
+import { WeatherServiceService } from './lib/weather-service.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { MyComponent } from './my-component/my-component.component';
       { path: 'my-component', component: MyComponent },
     ])
   ],
-  providers: [],
+  providers: [WeatherServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

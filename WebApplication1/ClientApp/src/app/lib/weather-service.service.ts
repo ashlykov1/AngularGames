@@ -1,0 +1,33 @@
+import { Injectable, Inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { WeatherForecast } from './Lib';
+
+@Injectable()
+export class WeatherServiceService {
+
+  http: HttpClient;
+  baseUrl: string;
+
+  constructor(http: HttpClient) {
+    this.http = http;
+    this.baseUrl = 'https://localhost:5001/';
+  }
+
+  public getData() {
+  }
+
+  public createData(w: WeatherForecast) { }
+
+  public updateData(w: WeatherForecast) { }
+
+  public deleteData(w: WeatherForecast) { }
+
+  public getDataById(w: WeatherForecast) { }
+
+  public getData() {
+
+    return this.http.get<WeatherForecast[]>(this.baseUrl + 'api/SampleData/WeatherForecasts');
+
+  }
+
+}
