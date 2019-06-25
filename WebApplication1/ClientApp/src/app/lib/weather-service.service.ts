@@ -13,9 +13,6 @@ export class WeatherServiceService {
     this.baseUrl = 'https://localhost:5001/';
   }
 
-  public getData() {
-  }
-
   public createData(w: WeatherForecast) { }
 
   public updateData(w: WeatherForecast) { }
@@ -25,9 +22,6 @@ export class WeatherServiceService {
   public getDataById(w: WeatherForecast) { }
 
   public getData() {
-
     return this.http.get<WeatherForecast[]>(this.baseUrl + 'api/SampleData/WeatherForecasts');
-
   }
-
 }

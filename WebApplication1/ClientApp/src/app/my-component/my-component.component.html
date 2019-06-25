@@ -12,10 +12,41 @@
   </thead>
   <tbody>
     <tr *ngFor="let forecast of weather">
-      <td>{{ forecast.dateFormatted }}</td>
+      <td (click)="edit(forecast);">{{ forecast.dateFormatted }}</td>
       <td>{{ forecast.temperatureC }}</td>
       <td>{{ forecast.temperatureF }}</td>
       <td>{{ forecast.summary }}</td>
+      <td><button (click)="delete(forecast)">Delete</button></td>
     </tr>
   </tbody>
 </table>
+<ul *ngIf="current">
+  <li>
+    <label>
+      dateFormatted
+    </label>
+    <input [(ngModel)]="current.dateFormatted" />
+  </li>
+  <li>
+    <label>
+      temperatureC
+    </label><input [(ngModel)]="current.temperatureC" />
+
+  </li>
+  <li>
+    <label>
+      temperatureF
+    </label>
+    <input [(ngModel)]="current.temperatureF" />
+
+  </li>
+  <li>
+    <label>
+      summary
+    </label>
+    <input [(ngModel)]="current.summary" />
+  </li>
+</ul>
+<button (click)="submit()">Save</button>
+
+<button (click)="add()">Add</button>
