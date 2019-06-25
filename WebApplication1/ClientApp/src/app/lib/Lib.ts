@@ -1,8 +1,8 @@
-interface WeatherForecast {
-    dateFormatted: string;
-    temperatureC: number;
-    temperatureF: number;
-    summary: string;
-  }
+class WeatherForecast {
+  public dateFormatted: string;
+  public temperatureC: number;
+  public temperatureF: number;
+  public summary: string;
+}
 
 export {WeatherForecast};
