@@ -1,6 +1,6 @@
 import { Component , Inject} from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-
+import { WeatherForecast } from '../lib/Lib'
 @Component({
   selector: 'my-component-home',
   templateUrl: './my-component.component.html',
@@ -14,11 +14,4 @@ export class MyComponent {
       this.weather= result;
     }, error => console.error(error));
   }
-}
-
-interface WeatherForecast {
-  dateFormatted: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
 }
