@@ -15,7 +15,9 @@ export class WeatherServiceService {
 
   public createData(w: WeatherForecast) { }
 
-  public updateData(w: WeatherForecast) { }
+  public save(w: WeatherForecast[]) {
+    return this.http.post(this.baseUrl + 'api/SampleData/Save', w);
+  }
 
   public deleteData(w: WeatherForecast) { }
 

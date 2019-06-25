@@ -44,4 +44,13 @@ export class MyComponent {
     this.service.getData().subscribe(
       data => this.weather = data);
   }
+
+  public submit() {
+    this.service.save(this.weather).subscribe(
+      data =>
+      {
+        alert('Saved');
+      },
+      error => console.error(error));
+  }
 }

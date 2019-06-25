@@ -26,6 +26,12 @@ namespace WebApplication1.Controllers
             });
         }
 
+        [HttpPost("[action]")]
+        public void Save(IEnumerable<WeatherForecast> data)
+        {
+            ;
+        }
+
         public class WeatherForecast
         {
             public string DateFormatted { get; set; }
