@@ -1,0 +1,16 @@
+p > span {
+  display:block;
+  background-color:inherit;
+  margin-top:5px;
+}
+  p > span > label {
+    width: 150px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  p > span > input {
+    width:200px;
+    margin: 0 0 0 0;
+    padding:0 0 0 0;
+  }

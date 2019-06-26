@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { MyComponent } from './my-component/my-component.component';
 import { WeatherServiceService } from './lib/weather-service.service';
+import { CurrentforcastComponent } from './currentforcast/currentforcast.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { WeatherServiceService } from './lib/weather-service.service';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    MyComponent
+    MyComponent,
+    CurrentforcastComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
